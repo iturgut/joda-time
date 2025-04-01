@@ -55,6 +55,6 @@ jobs:
     - name: Trigger downstream build chain for spring-petclinic
       uses: kiegroup/github-action-build-chain@v3.5.9
       with:
-        definition-file: https://raw.githubusercontent.com/${{ secrets.GROUP }}/6.2.2-mavenintegration/main/.ci/pull-request-config.yaml
+        definition-file: https://raw.githubusercontent.com/${{ secrets.GROUP }}/buildchain-maven/main/.ci/pull-request-config.yaml
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
