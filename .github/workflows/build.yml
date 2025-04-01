@@ -50,3 +50,11 @@ jobs:
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@70df9def86d22bf0ea4e7f8b956e7b92e7c1ea22  #codeql-bundle-v2.20.7
+
+
+    - name: Trigger downstream build chain for spring-petclinic
+      uses: kiegroup/github-action-build-chain@v3.5.9
+      with:
+        definition-file: https://raw.githubusercontent.com/${{ secrets.GROUP }}/6.2.2-mavenintegration/main/.ci/pull-request-config.yaml
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
