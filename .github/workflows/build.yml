@@ -25,7 +25,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683  #v4.2.2
       with:
-        token: ${{ secrets.PERSONAL_GITHUB_TOKEN }}
+        token: ${{ secrets.TOKEN }}
 
     - name: Set up JDK
       uses: actions/setup-java@3a4f6e1af504cf6a31855fa899c6aa5355ba6c12  #v4.7.0
@@ -57,4 +57,4 @@ jobs:
       with:
         definition-file: https://raw.githubusercontent.com/iturgut/buildchain-maven/main/.ci/pull-request-config.yaml
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.TOKEN }}
